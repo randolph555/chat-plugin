@@ -333,6 +333,28 @@
   font-size: 11px;
 }
 
+/* 刷新模型按钮样式 */
+.refresh-models-btn {
+  background: none;
+  border: none;
+  color: var(--chat-text-muted);
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.refresh-models-btn:hover {
+  background: var(--chat-hover);
+  color: var(--chat-text);
+}
+
+.refresh-models-btn:active {
+  transform: scale(0.95);
+}
+
 /* 当前选中模型显示 */
 .current-model-indicator {
   display: inline-flex;
