@@ -1,0 +1,39 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0969da;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a7f37;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <circle cx="64" cy="64" r="60" fill="url(#grad1)" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- GitHub风格的代码图标 -->
+  <rect x="32" y="40" width="64" height="48" rx="4" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- 代码行 -->
+  <rect x="38" y="48" width="20" height="2" fill="#0969da"/>
+  <rect x="62" y="48" width="28" height="2" fill="#0969da"/>
+  
+  <rect x="38" y="54" width="32" height="2" fill="#6c757d"/>
+  <rect x="74" y="54" width="16" height="2" fill="#6c757d"/>
+  
+  <rect x="38" y="60" width="16" height="2" fill="#1a7f37"/>
+  <rect x="58" y="60" width="24" height="2" fill="#1a7f37"/>
+  
+  <rect x="38" y="66" width="28" height="2" fill="#0969da"/>
+  <rect x="70" y="66" width="20" height="2" fill="#0969da"/>
+  
+  <rect x="38" y="72" width="18" height="2" fill="#6c757d"/>
+  <rect x="60" y="72" width="22" height="2" fill="#6c757d"/>
+  
+  <!-- AI聊天气泡 -->
+  <circle cx="88" cy="96" r="16" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
+  <circle cx="84" cy="92" r="2" fill="#0969da"/>
+  <circle cx="88" cy="92" r="2" fill="#0969da"/>
+  <circle cx="92" cy="92" r="2" fill="#0969da"/>
+  
+  <!-- 连接线表示交互 -->
+  <path d="M 72 76 Q 80 86 72 96" stroke="#1a7f37" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+</svg>

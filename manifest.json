@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub代码分析助手",
+  "version": "1.0.0",
+  "description": "基于LLM的GitHub代码库智能分析和对话助手",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "cookies",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://github.com/*",
+    "https://api.github.com/*",
+    "https://api.openai.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://api.anthropic.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": [
+        "scripts/storage-manager.js",
+        "scripts/github-api.js",
+        "scripts/llm-adapters.js",
+        "scripts/context-manager.js",
+        "scripts/conversation-manager.js",
+        "scripts/api-manager.js",
+        "scripts/stream-handler.js",
+        "scripts/chat-window-core.js",
+        "scripts/image-upload-manager.js",
+        "scripts/simple-file-reference.js",
+        "scripts/chat-window.js",
+        "content.js"
+      ],
+      "css": ["styles/content.css", "styles/modular-chat.css", "styles/conversation-manager.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GitHub代码分析助手"
+  },
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*",
+        "styles/*",
+        "components/*"
+      ],
+      "matches": ["https://github.com/*"]
+    }
+  ],
+  "icons": {
+    "16": "assets/icon16.svg",
+    "48": "assets/icon48.svg",
+    "128": "assets/icon128.svg"
+  }
+}

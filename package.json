@@ -1,0 +1,88 @@
+{
+  "name": "github-chat-assistant",
+  "version": "1.0.0",
+  "description": "GitHub代码分析助手Chrome插件",
+  "main": "background.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint scripts/**/*.js *.js",
+    "lint:fix": "eslint scripts/**/*.js *.js --fix",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "build": "npm run lint && npm run test && node scripts/build.js",
+    "dev": "node scripts/dev.js",
+    "validate": "npm run lint && npm run test",
+    "clean": "rimraf dist coverage"
+  },
+  "keywords": [
+    "chrome-extension",
+    "github",
+    "ai",
+    "code-analysis",
+    "llm",
+    "openai",
+    "anthropic",
+    "gemini"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.1.0",
+    "@jest/globals": "^29.7.0",
+    "jsdom": "^23.0.0",
+    "rimraf": "^5.0.0",
+    "chokidar": "^3.5.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"],
+    "collectCoverageFrom": [
+      "scripts/**/*.js",
+      "*.js",
+      "!scripts/build.js",
+      "!scripts/dev.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": ["text", "lcov", "html"],
+    "testMatch": [
+      "<rootDir>/tests/**/*.test.js"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "webextensions": true,
+      "jest": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "globals": {
+      "chrome": "readonly"
+    },
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "off",
+      "prefer-const": "error",
+      "no-var": "error",
+      "no-undef": "error",
+      "semi": ["error", "always"],
+      "quotes": ["error", "single"]
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2
+  }
+}
