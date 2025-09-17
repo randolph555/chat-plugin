@@ -80,3 +80,6 @@ web-ext-artifacts/
 # Backup files
 *.bak
 *.backup
+
+# CodeBuddy directory
+.codebuddy/
