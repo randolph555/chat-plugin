@@ -71,7 +71,7 @@ class ChatWindowCore {
             <button class="refresh-models-btn" title="刷新模型列表">🔄</button>
           </div>
           <div class="input-container">
-            <textarea id="chat-input" placeholder="输入消息... (输入 @model 快速选择模型)" rows="1"></textarea>
+            <textarea id="chat-input" placeholder="输入消息... (试试输入 @)" rows="1"></textarea>
             <div class="input-actions">
               <button class="upload-btn" title="上传图片">📎</button>
               <button class="send-btn" title="发送">➤</button>
